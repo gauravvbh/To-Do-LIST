@@ -3,20 +3,19 @@
     margin: 0;
     font-family: 'Poppins', sans-serif;
 }
-body{
-    background:hsl(288, 84%, 20%);
-}
 .container {
-    border: 1px solid purple;
     border-radius: 20px;
     max-width: 30rem;
-    background: transparent;
+    /* background: transparent; */
     background: wheat;
     margin-left: 25rem;
     margin-top: 5rem;
-    min-height: 14rem;
-    min-width: 350px;
+    min-height: 12rem;
+    min-width: 200px;
     font-size: 20px;
+}
+.row button{
+    font-size: 13px;
 }
 .to-do{
     display: flex;
@@ -78,12 +77,17 @@ button{
 ul li{
     list-style:none;
     font-size: 17px;
-    padding: 12px 70px 25px 60px;
+    padding: 20px 70px 20px 70px;
     user-select: none;
     cursor: pointer;
     position: relative;
+    border-radius: 35px;
 
 }
+ul li:hover{
+    background: rgba(128, 128, 128, 0.267);
+}
+
 ul li::before{
     content: '';
     position: absolute;
@@ -93,8 +97,8 @@ ul li::before{
     background: url('unchecked.png');
     background-size: cover;
     background-position: center;
-    top: 10px;
-    left: 15px;
+    top: 18px;
+    left: 30px;
 }
 ul li.checked{
     text-decoration: line-through;
@@ -121,5 +125,5 @@ ul li span{
     text-decoration:none;
 }
 ul li span:hover{
-    background: rgba(255, 0, 0, 0.294);
+    background: rgba(255, 0, 0, 0.425);
 }

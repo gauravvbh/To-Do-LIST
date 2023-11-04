@@ -52,5 +52,6 @@ icon.addEventListener("click",()=>{
  }else{
     body.style.background="white";
     body.style.color="black";
+    body.style.transition='1s'
  }
 })
