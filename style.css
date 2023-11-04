@@ -1,10 +1,10 @@
 *{
     padding: 0;
     margin: 0;
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Poppins', sans-serif;
 }
 body{
-    background:#4e085f;
+    background:hsl(288, 84%, 20%);
 }
 .container {
     border: 1px solid purple;
@@ -14,19 +14,35 @@ body{
     background: wheat;
     margin-left: 25rem;
     margin-top: 5rem;
-    min-height: 10rem;
-    font-size: 18px;
+    min-height: 14rem;
+    min-width: 350px;
+    font-size: 20px;
 }
 .to-do{
     display: flex;
+    justify-content: space-between;
     padding-top: 50px;
+    position: relative;
 }
-.to-do img{
-    width: 20px;
+.box1 img{
+    max-width: 35px;
+    max-height: 35px;
     margin-left: 10px;
 }
+.box1{
+    display: flex;
+}
 .to-do h3{
+    display: inline;
     margin-left: 30px;
+    font-weight: 700;
+}
+
+i{
+    position:absolute;
+    padding-top: 8px;
+    right: 2rem;
+    cursor: pointer;
 }
 
 
@@ -44,7 +60,7 @@ input{
     border-radius: 25px;
     background:transparent;
     width: 100%;
-    padding: 17px;
+    padding: 15px;
     outline: none;
     font-size: .9rem;
 }
@@ -62,7 +78,7 @@ button{
 ul li{
     list-style:none;
     font-size: 17px;
-    padding: 12px 30px 25px 60px;
+    padding: 12px 70px 25px 60px;
     user-select: none;
     cursor: pointer;
     position: relative;
@@ -93,7 +109,8 @@ ul li{
     justify-content: space-between;
 }
 ul li span{
-    position: relative;
+    position: absolute;
+    right: 2rem;
     width: 25px;
     height: 25px;
     font-size: 17px;
@@ -101,6 +118,7 @@ ul li span{
     cursor: pointer;
     background: rgb(205, 202, 202);
     border-radius: 50%;
+    text-decoration:none;
 }
 ul li span:hover{
     background: rgba(255, 0, 0, 0.294);
