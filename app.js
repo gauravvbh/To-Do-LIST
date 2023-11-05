@@ -43,15 +43,15 @@ let icon=document.querySelector("i");
 let body=document.querySelector("body");
 
 icon.addEventListener("click",()=>{
- icon.classList.toggle("fa-sun")
  icon.classList.toggle("fa-moon")
+ icon.classList.toggle("fa-sun")
  if(icon.classList.contains('fa-moon')){
-    body.style.background="black";
-    body.style.color="grey";
-    body.style.transition='1s'
- }else{
-    body.style.background="white";
+    body.style.background="linear-gradient(90deg,rgba(56, 114, 250, 0.815) 70%,white)";
     body.style.color="black";
-    body.style.transition='1s'
+    body.style.transition='1s';
+ }else{
+    body.style.background="linear-gradient(90deg,rgb(133, 131, 131),black 60%)";
+    body.style.color="white";
+    body.style.transition='1s';
  }
 })

@@ -3,11 +3,20 @@
     margin: 0;
     font-family: 'Poppins', sans-serif;
 }
+body{
+    background: linear-gradient(90deg,rgba(56, 114, 250, 0.815) 60%,white);
+    /* background: linear-gradient(90deg,rgb(133, 131, 131),black 60%); */
+}
+:root{
+    --color-primary:red;
+    --color-secondary:orangered;
+}
 .container {
     border-radius: 20px;
     max-width: 30rem;
-    /* background: transparent; */
-    background: wheat;
+    backdrop-filter: blur(500px);
+    /* border: 1px solid black; */
+    box-shadow: 5px 5px 20px rgb(59, 59, 59);
     margin-left: 25rem;
     margin-top: 5rem;
     min-height: 12rem;
@@ -40,7 +49,7 @@
 i{
     position:absolute;
     padding-top: 8px;
-    right: 2rem;
+    right: 50px;
     cursor: pointer;
 }
 
@@ -51,10 +60,10 @@ i{
     justify-content: space-between;
     margin: 25px;
     background:rgb(206, 203, 203);
+    /* border: 2px solid black; */
     border-radius: 25px;
 }
 input{
-    text-decoration: none;
     border: none;
     border-radius: 25px;
     background:transparent;
@@ -62,26 +71,36 @@ input{
     padding: 15px;
     outline: none;
     font-size: .9rem;
+    height: 20px;
+}
+.row:focus-within{
+    box-shadow: 1px 1px 15px rgb(0, 0, 0);
+
 }
 button{
     border-radius: 25px;
     text-decoration: none;
     border: none;
     width: 10rem;
-    background: orangered;
+    background: var(--color-secondary);
     cursor: pointer;
+}
+.box1 span{
+    color: var(--color-secondary);
 }
 
 /* tasks */
 
 ul li{
     list-style:none;
-    font-size: 17px;
-    padding: 20px 70px 20px 70px;
-    user-select: none;
+    font-size: 16px;
+    padding: 15px 50px 0px 70px;
     cursor: pointer;
     position: relative;
     border-radius: 35px;
+    min-height: 45px;
+    margin: 0 15px 0 15px;
+    margin-bottom: 20px;
 
 }
 ul li:hover{
@@ -97,8 +116,9 @@ ul li::before{
     background: url('unchecked.png');
     background-size: cover;
     background-position: center;
-    top: 18px;
-    left: 30px;
+    top: 14px;
+    left: 20px;
+    padding: 2px;
 }
 ul li.checked{
     text-decoration: line-through;
@@ -108,22 +128,23 @@ ul li.checked::before{
     background-position: center;
     background-size: cover;
 }
-ul li{
+/* ul li{
     display: flex;
     justify-content: space-between;
-}
+} */
 ul li span{
     position: absolute;
-    right: 2rem;
+    right: 1rem;
+    bottom: 18px;
     width: 25px;
     height: 25px;
-    font-size: 17px;
     text-align: center;
     cursor: pointer;
     background: rgb(205, 202, 202);
+    color: var(--color-primary);
     border-radius: 50%;
-    text-decoration:none;
 }
 ul li span:hover{
-    background: rgba(255, 0, 0, 0.425);
+    background: var(--color-primary);
+    color: white;
 }
