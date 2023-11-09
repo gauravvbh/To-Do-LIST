@@ -5,7 +5,6 @@
 }
 body{
     background: linear-gradient(90deg,rgba(56, 114, 250, 0.815) 60%,white);
-    /* background: linear-gradient(90deg,rgb(133, 131, 131),black 60%); */
 }
 :root{
     --color-primary:red;
@@ -13,14 +12,14 @@ body{
 }
 .container {
     border-radius: 20px;
-    max-width: 30rem;
+    max-width: 35vw;
+    min-width: 200px;
+    min-height: 200px;
     backdrop-filter: blur(500px);
     /* border: 1px solid black; */
     box-shadow: 5px 5px 20px rgb(59, 59, 59);
     margin-left: 25rem;
     margin-top: 5rem;
-    min-height: 12rem;
-    min-width: 200px;
     font-size: 20px;
 }
 .row button{
@@ -45,7 +44,9 @@ body{
     margin-left: 30px;
     font-weight: 700;
 }
-
+.box2{
+    position: relative;
+}
 i{
     position:absolute;
     padding-top: 8px;
@@ -99,9 +100,7 @@ ul li{
     position: relative;
     border-radius: 35px;
     min-height: 45px;
-    margin: 0 15px 0 15px;
-    margin-bottom: 20px;
-
+    margin: 0 15px 20px 15px;
 }
 ul li:hover{
     background: rgba(128, 128, 128, 0.267);
