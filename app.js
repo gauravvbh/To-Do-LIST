@@ -8,7 +8,9 @@ btn.addEventListener("click", () => {
   } else {
     let li = document.createElement("li");
     ul.appendChild(li);
-    li.innerText = input.value;
+    let p = document.createElement("p");
+    li.appendChild(p);
+    p.innerText = input.value;
 
     let del = document.createElement("span");
     del.innerHTML = "\u00d7";
@@ -19,11 +21,18 @@ btn.addEventListener("click", () => {
 });
 
 ul.addEventListener("click", (e) => {
-  if (e.target.tagName === "LI") {
-    e.target.classList.toggle("checked");
+  if (e.target.tagName === "LI" || e.target.tagName === "P") {
+    const targetElement = e.target.tagName === "P" ? e.target.parentElement : e.target;
+    targetElement.classList.toggle("checked");
   } else if (e.target.tagName === "SPAN") {
     e.target.parentElement.remove();
   }
+
+    // if (e.target.tagName === "LI" || e.target.tagName === "P") {
+    //   e.target.classList.toggle("checked");
+    // } else if (e.target.tagName === "SPAN") {
+    //   e.target.parentElement.remove();
+    // }
   getData();
 });
 
@@ -39,6 +48,7 @@ window.addEventListener('load',()=>{
 });
 
 
+//dark-mode and light-mode
 let icon=document.querySelector("i");
 let body=document.querySelector("body");
 
@@ -50,7 +60,7 @@ icon.addEventListener("click",()=>{
     body.style.color="black";
     body.style.transition='1s';
  }else{
-    body.style.background="linear-gradient(90deg,rgb(133, 131, 131),black 60%)";
+    body.style.background="linear-gradient(90deg,rgb(82, 80, 80),black 60%)";
     body.style.color="white";
     body.style.transition='1s';
  }

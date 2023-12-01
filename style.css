@@ -122,6 +122,9 @@ ul li::before{
 ul li.checked{
     text-decoration: line-through;
 }
+.checked p{
+    opacity: 0.5;
+}
 ul li.checked::before{
     background: url('checked.png');
     background-position: center;
